@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | ONG Futuro Brilhante</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Configurações Gerais e Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- Paleta de Cores (Variáveis CSS) --- */
+        :root {
+            --verde-esperanca: #2A9D8F;
+            --amarelo-vibrante: #E9C46A;
+            --branco: #FFFFFF;
+            --cinza-escuro: #264653; /* Cor principal do texto */
+            --cinza-claro: #F4F4F4;  /* Cor para fundos de seção */
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--branco); /* Fundo principal */
+            color: var(--cinza-escuro); /* Cor padrão do texto */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Cabeçalho e Navegação --- */
+        header {
+            background-color: var(--verde-esperanca);
+            color: var(--branco);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            font-weight: 700;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Conteúdo Principal --- */
+        main section {
+            padding: 60px 0;
+        }
+
+        h1, h2 {
+            color: var(--verde-esperanca); /* Títulos com a cor principal */
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        h1 { font-size: 2.5rem; text-align: center; }
+        h2 { font-size: 2rem; }
+
+        p {
+            margin-bottom: 15px;
+            max-width: 800px; /* Melhora a legibilidade */
+        }
+        
+        #hero p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* --- Seção de Missão, Visão e Valores --- */
+        #missao-visao-valores {
+            background-color: var(--cinza-claro); /* Fundo de seção com o cinza claro */
+        }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .valor-card {
+            background-color: var(--branco);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .valor-card h3 {
+            color: var(--verde-esperanca);
+            margin-bottom: 10px;
+        }
+
+        /* --- Seção de Chamada para Ação (CTA) --- */
+        #cta {
+            text-align: center;
+        }
+
+        .cta-botao {
+            display: inline-block;
+            background-color: var(--amarelo-vibrante); /* Cor de destaque para o botão */
+            color: var(--cinza-escuro); /* Texto do botão contrastante */
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-botao:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* --- Rodapé --- */
+        footer {
+            background-color: var(--verde-esperanca); /* Cor principal no rodapé */
+            color: var(--branco);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Futuro Brilhante</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Como Ajudar</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Nossa História</h1>
+                <p>
+                    A ONG Futuro Brilhante nasceu em 2020 do sonho de um grupo de educadores 
+                    que acreditavam no poder da educação e do afeto para transformar vidas. 
+                    Começamos em uma pequena sala de aula comunitária e hoje, com a ajuda de voluntários 
+                    e doadores, já impactamos a vida de centenas de crianças.
+                </p>
+            </div>
+        </section>
+
+        <section id="missao-visao-valores">
+            <div class="container">
+                <h2 style="text-align: center;">Nossos Pilares</h2>
+                <div class="valores-grid">
+                    <div class="valor-card">
+                        <h3>Missão</h3>
+                        <p>Promover o desenvolvimento integral de crianças em situação de vulnerabilidade social através da educação, cultura e esporte, oferecendo um ambiente seguro e estimulante.</p>
+                    </div>
+                    <div class="valor-card">
+                        <h3>Visão</h3>
+                        <p>Ser uma organização de referência no acolhimento e na formação de cidadãos conscientes, críticos e felizes, capazes de construir um futuro mais justo e solidário para todos.</p>
+                    </div>
+                    <div class="valor-card">
+                        <h3>Valores</h3>
+                        <p>Acreditamos no Respeito, na Empatia, na Transparência em nossas ações, no Compromisso com a comunidade e, acima de tudo, no Amor como força transformadora.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="cta">
+            <div class="container">
+                <h2>Faça Parte da Mudança</h2>
+                <p>Sua ajuda pode transformar o futuro de uma criança. Descubra como você pode contribuir.</p>
+                <a href="#" class="cta-botao">Junte-se a Nós</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ONG Futuro Brilhante. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

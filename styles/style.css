@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-esperanca: #2A9D8F;
+    --amarelo-vibrante: #E9C46A;
+    --branco: #FFFFFF;
+    --cinza-escuro: #264653;
+    /* Cor principal do texto */
+    --cinza-claro: #F4F4F4;
+    /* Cor para fundos de seção */
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--branco);
+    /* Fundo principal */
+    color: var(--cinza-escuro);
+    /* Cor padrão do texto */
+    line-height: 1.6;
+}
+
+/* cabeçalhor e navegação */
+
+header {
+    background-color: var(--verde-esperanca);
+    color: var(--branco);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .div_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav_h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+nav .ul_nav {
+    list-style: none;
+    display: flex;
+}
+
+nav .ul_nav .li_nav {
+    margin-left: 25px;
+}
+
+nav .a_nav {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+.a_nav:hover {
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.img_container {
+    width: 50%;
+    height: 10%;
+    right: 50%;
+    overflow: hidden;
+
+}
+
+.img_apresentacao {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- SEÇÃO HERO (IMAGEM DE CAPA) --- */
+
+.hero-section {
+
+    position: relative;
+    height: 80vh;
+    width: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    background-image: url('../assets/imgs/pexels-eliomar-reis-32249053-7031742.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(42, 157, 143, 1) 0%, transparent 30%);
+}
+
+
+.hero-texto {
+    position: relative;
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.hero-texto h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-texto p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+}
+
+/* Apenas para estilizar o resto do conteúdo da página */
+.conteudo-principal {
+    padding: 60px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.historia {
+    text-align: center;
+    margin: 3px;
+
+}
+
+.valores_grid {
+    padding: 10px;
+    background-color: var(--cinza-claro);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    width: 100%;
+    
+
+
+}
+
+.valores_h2{
+    text-align: center;
+    padding: 4px;
+    color: var(--verde-esperanca);
+}
+
+.valores{
+    margin: 10px;
+    padding: 10px;
+    text-align: start;
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+footer{
+    background-color: var(--verde-esperanca);
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: var(--branco );
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-family: 'Nunito', sans-serif;
+
+    }
+
+    header .div_container {
+        background-color: var(--verde-esperanca);
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .nav_h1 {
+        color: var(--branco);
+    }
+
+    nav .ul_nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .a_nav {
+        text-decoration: none;
+        color: var(--branco);
+        font-weight: 700;
+        transition: opacity 0.3s;
+        font-size: 25px;
+    }
+
+    .a_nav:hover {
+        opacity: 0.8;
+    }
+
+    .hero-section {
+
+        position: relative;
+        height: 80vh;
+        width: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        background-image: url('../assets/imgs/pexels-eliomar-reis-32249053-7031742.jpg');
+        background-size: cover;
+        background-position: center;
+
+
+
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgb(122, 255, 239) 0%, transparent 30%);
+    }
+
+    .hero-texto {
+        position: relative;
+        color: var(--branco);
+        text-align: center;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+}
