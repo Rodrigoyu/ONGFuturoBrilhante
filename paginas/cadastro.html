@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="br-pt">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,37 +9,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- barrar de navegarção -->
-    <!-- Cabeçalhor -->
     <header>
-        <div class="div_container">
-
+        <div class="div_container_header">
             <div class="nav_titulo">
                 <h1 class="nav_h1">Futuro Brilhante</h1>
             </div>
-
             <nav>
                 <ul class="ul_nav">
-                    <li class="li_nav"><a class="a_nav" href="../index.html">Inicio</a></li>
+                    <li class="li_nav"><a class="a_nav" href="../index.html">Início</a></li>
                     <li class="li_nav"><a class="a_nav" href="projetos.html">Projetos</a></li>
-                    <li class="li_nav"><a class="a_nav" href="cadastro.html">cadastro</a></li>
+                    <li class="li_nav"><a class="a_nav" href="cadastro.html">Cadastro</a></li>
                 </ul>
             </nav>
         </div>
-
     </header>
 
     <main>
-        <section>
-            <div class="container">
+        <section class="pagina-titulo-section">
+            <div class="pagina-titulo-texto">
+                <h1>Seja um Voluntário</h1>
+            </div>
+        </section>
 
+        <section class="conteudo-principal">
+            <div class="container">
+                <form class="form-cadastro">
+                    <h2>Preencha seus dados</h2>
+                    <p>Faça parte da nossa equipe e ajude a construir um futuro brilhante!</p>
+                    
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="mensagem-erro" id="erro-email"></p>
+                    
+                    <label for="telefone">Telefone (somente números)</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="11999998888" required maxlength="11">
+                    <p class="mensagem-erro" id="erro-telefone"></p>
+
+                    <label for="cpf">CPF (somente números)</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="12345678900" required maxlength="11">
+                    <p class="mensagem-erro" id="erro-cpf"></p>
+
+                    <label for="mensagem">Por que você quer ser voluntário?</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                    <button type="submit">Enviar Cadastro</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <script src="scripts/script.js"></script>
-</body>
+    <footer>
+        <p>&copy; <span id="ano-atual"></span> Futuro Brilhante. Todos os direitos reservados.</p>
+    </footer>
 
+    <script src="../scripts/script.js"></script>
+</body>
 </html>
