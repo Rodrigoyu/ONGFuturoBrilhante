@@ -13,15 +13,15 @@ Abaixo estão algumas capturas de tela das principais páginas do projeto, demon
 
 ### Página Inicial
 *Uma visão completa da organização, com seção hero, missão, visão e valores.*
-![Visualização da Página Inicial](../assets/imgs/index.png)
+![Visualização da Página Inicial](assets/imgs/index.png)
 
 ### Página de Projetos
 *Uma galeria em grid apresentando os projetos da ONG de forma clara e organizada.*
-![Visualização da Página de Projetos](../assets/imgs/projeto.png)
+![Visualização da Página de Projetos](assets/imgs/projeto.png)
 
 ### Página de Cadastro de Voluntários
 *Um formulário limpo e funcional com validação de dados em tempo real.*
-![Visualização da Página de Cadastro](../assets/imgs/formulario.png)
+![Visualização da Página de Cadastro](assets/imgs/formulario.png)
 
 
 ---
@@ -76,7 +76,7 @@ E pronto! Você poderá navegar por todas as páginas do site.
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **JoséRodrigo**.
+Desenvolvido por **José Rodrigo**.
 
-- **GitHub:** [RodrigoyU](https://github.com/seu-usuario)
-- **LinkedIn:** [Seu Nome](https://www.linkedin.com/in/seu-perfil/)
+- **GitHub:** [Rodrigoyu](https://github.com/seu-usuario)
+- **LinkedIn:** [José Rodrigo](https://www.linkedin.com/in/jose-rodrigo-silva-sena/)
