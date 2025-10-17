@@ -52,16 +52,16 @@ header .div_container_header {
     font-weight: 800;
 }
 
-nav .ul_nav {
+.nav_principal .ul_nav {
     list-style: none;
     display: flex;
 }
 
-nav .ul_nav .li_nav {
+.nav_principal .ul_nav .li_nav {
     margin-left: 25px;
 }
 
-nav .a_nav {
+.nav_principal .a_nav {
     text-decoration: none;
     color: var(--branco);
     font-weight: 700;
@@ -122,6 +122,7 @@ nav .a_nav {
     text-align: center;
     margin-bottom: 40px;
 }
+
 .historia h2 {
     color: var(--verde-esperanca);
     margin-bottom: 15px;
@@ -134,24 +135,29 @@ nav .a_nav {
     gap: 30px;
     margin-top: 40px;
 }
+
 .valores-card {
     background-color: var(--cinza-claro);
     padding: 30px;
     border-radius: 10px;
 }
+
 .valores-card h3 {
     color: var(--verde-esperanca);
     text-align: center;
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
+
 .lista-valores {
     list-style: none;
     padding: 0;
 }
+
 .lista-valores li {
     margin-bottom: 15px;
 }
+
 .lista-valores li:last-child {
     margin-bottom: 0;
 }
@@ -162,10 +168,12 @@ nav .a_nav {
     background-color: var(--cinza-claro);
     padding: 40px 0;
 }
+
 .pagina-titulo-texto {
     color: var(--verde-esperanca);
     text-align: center;
 }
+
 .pagina-titulo-texto h1 {
     font-size: 3.5rem;
     font-weight: 800;
@@ -178,6 +186,7 @@ nav .a_nav {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
+
 .card-project {
     background-color: var(--branco);
     border-radius: 10px;
@@ -187,24 +196,29 @@ nav .a_nav {
     flex-direction: column;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .card-project:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 .card-imgs {
     height: 220px;
     width: 100%;
 }
+
 .card-imgs img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
 .card-text {
     padding: 20px;
     flex-grow: 1;
 }
+
 .card-text h3 {
     color: var(--verde-esperanca);
     margin-bottom: 10px;
@@ -219,15 +233,19 @@ nav .a_nav {
     background-color: var(--cinza-claro);
     border-radius: 10px;
 }
-.form-cadastro h2, .form-cadastro p {
+
+.form-cadastro h2,
+.form-cadastro p {
     text-align: center;
     margin-bottom: 20px;
 }
+
 .form-cadastro label {
     display: block;
     margin-bottom: 5px;
     font-weight: 700;
 }
+
 .form-cadastro input,
 .form-cadastro textarea {
     width: 100%;
@@ -238,6 +256,7 @@ nav .a_nav {
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
 }
+
 .form-cadastro button {
     width: 100%;
     padding: 15px;
@@ -250,6 +269,7 @@ nav .a_nav {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .form-cadastro button:hover {
     background-color: #f0c975;
 }
@@ -267,37 +287,65 @@ footer {
 /* --- ESTILOS PARA VALIDAÇÃO DE FORMULÁRIO --- */
 
 .mensagem-erro {
-    color: #c0392b; /* Um tom de vermelho */
+    color: #c0392b;
     font-size: 0.85rem;
-    margin-top: -15px; /* Puxa a mensagem para mais perto do campo */
+    margin-top: -15px;
     margin-bottom: 10px;
-    display: block; /* Garante que a mensagem ocupe sua própria linha */
-    height: 1rem; /* Garante um espaço fixo para a mensagem não "empurrar" o layout */
+    display: block;
+    height: 1rem;
 }
 
 .input-erro {
-    border: 2px solid #c0392b !important; /* Borda vermelha para campos inválidos */
+    border: 2px solid #c0392b !important;
     background-color: #fbe9e7;
 }
+
+.buttonToggle {
+    display: none;
+}
+
 /* --- MEDIA QUERIES (AJUSTES PARA TELAS PEQUENAS) --- */
 @media (max-width: 768px) {
     header .div_container_header {
-        flex-direction: column;
-        gap: 15px; /* Adiciona um espaço entre o título e a navegação */
+        flex-direction: row;
+        padding-left: 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
     }
 
-    nav .ul_nav {
+    .buttonToggle {
+        display: block;
+        padding: 0;
+        background-color: var(--verde-esperanca);
+        border: none;
+        color: var(--branco);
+    }
+
+     .ul_nav {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--verde-esperanca);
         flex-direction: column;
-        align-items: center;
-        gap: 10px; /* Adiciona espaço entre os links do menu */
+        text-align: center;
+        transition: max-height 0.4s ease-out;
     }
-    
-    nav .ul_nav .li_nav {
-        margin-left: 0; /* Remove a margem lateral no modo coluna */
+
+    .ativo .ul_nav {
+        display: none;
     }
-    
-    /* Diminui o tamanho dos títulos grandes em telas pequenas */
-    .hero-texto h1, .pagina-titulo-texto h1 {
+
+  .li_nav {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+
+    .hero-texto h1,
+    .pagina-titulo-texto h1 {
         font-size: 2.5rem;
     }
 
@@ -305,8 +353,9 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* Diminui o padding do formulário em telas pequenas */
+
     .form-cadastro {
         padding: 20px;
     }
+
 }

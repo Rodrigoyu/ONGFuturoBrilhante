@@ -117,3 +117,28 @@ function limparErros() {
     const inputsComErro = document.querySelectorAll('.input-erro');
     inputsComErro.forEach(input => input.classList.remove('input-erro'));
 }
+
+// --- LÓGICA DO MENU HAMBÚRGUER ---
+const menuHamburguer = document.getElementById('menu-hamburguer');
+const navPrincipal = document.getElementById('ul_nav');
+const testeP = document.getElementById('teste');
+
+    menuHamburguer.addEventListener('click', ()=>{
+
+    navPrincipal.classList.toggle('ativo')
+    
+
+}
+)
+
+
+
+/*
+menuHamburguer.addEventListener('click', toke);
+function testeps(){
+function toke(){
+    testeP.textContent = 'fucionou';
+
+}
+}*/
+
