@@ -57,7 +57,7 @@ header .div_container_header {
     display: flex;
 }
 
-.nav_principal .ul_nav .li_nav {
+.nav_principal .li_nav {
     margin-left: 25px;
 }
 
@@ -72,6 +72,17 @@ header .div_container_header {
     opacity: 0.8;
 }
 
+/* Esconde o botão em telas grandes */
+.buttonToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--branco);
+    cursor: pointer;
+}
+.buttonToggle .material-symbols-outlined {
+    font-size: 2.5rem;
+}
 
 /* --- SEÇÃO HERO (PÁGINA INICIAL) --- */
 .hero-section {
@@ -163,7 +174,7 @@ header .div_container_header {
 }
 
 
-/* --- PÁGINA PROJETOS E CADASTRO (TÍTULO) --- */
+
 .pagina-titulo-section {
     background-color: var(--cinza-claro);
     padding: 40px 0;
@@ -180,7 +191,7 @@ header .div_container_header {
 }
 
 
-/* --- PÁGINA PROJETOS (GRID DE CARDS) --- */
+
 .projetos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -225,7 +236,7 @@ header .div_container_header {
 }
 
 
-/* --- PÁGINA DE CADASTRO (FORMULÁRIO) --- */
+
 .form-cadastro {
     max-width: 600px;
     margin: 0 auto;
@@ -275,7 +286,7 @@ header .div_container_header {
 }
 
 
-/* --- RODAPÉ --- */
+
 footer {
     background-color: var(--verde-esperanca);
     color: var(--branco);
@@ -284,7 +295,7 @@ footer {
     margin-top: 40px;
 }
 
-/* --- ESTILOS PARA VALIDAÇÃO DE FORMULÁRIO --- */
+
 
 .mensagem-erro {
     color: #c0392b;
@@ -300,62 +311,58 @@ footer {
     background-color: #fbe9e7;
 }
 
-.buttonToggle {
-    display: none;
-}
 
-/* --- MEDIA QUERIES (AJUSTES PARA TELAS PEQUENAS) --- */
+
+
 @media (max-width: 768px) {
-    header .div_container_header {
-        flex-direction: row;
-        padding-left: 20px;
-        justify-content: space-between;
-        align-items: center;
-        padding-right: 10px;
-    }
-
+    
     .buttonToggle {
         display: block;
-        padding: 0;
-        background-color: var(--verde-esperanca);
-        border: none;
-        color: var(--branco);
     }
 
-     .ul_nav {
-        display: block;
+    
+    .nav_principal {
         position: absolute;
-        top: 80px;
+        top: 80px; 
         left: 0;
         width: 100%;
         background-color: var(--verde-esperanca);
-        flex-direction: column;
-        text-align: center;
+        
+        max-height: 0;
+        overflow: hidden;
         transition: max-height 0.4s ease-out;
+        z-index: 1000; 
     }
 
-    .ativo .ul_nav {
-        display: none;
+    
+    .nav_principal.ativo {
+        max-height: 300px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+   
+    .nav_principal .ul_nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 15px;
     }
 
-  .li_nav {
-        padding: 15px 0;
+    .nav_principal .li_nav {
+        margin-left: 0;
         width: 100%;
+        text-align: center;
     }
 
+    .nav_principal .a_nav {
+        font-size: 1.2rem;
+        padding: 10px 0;
+        display: block;
+    }
 
+    
     .hero-texto h1,
     .pagina-titulo-texto h1 {
         font-size: 2.5rem;
     }
-
-    .hero-texto p {
-        font-size: 1.1rem;
-    }
-
-
-    .form-cadastro {
-        padding: 20px;
-    }
-
 }
