@@ -3,23 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
-    --verde-esperanca: #2A9D8F;
-    --amarelo-vibrante: #E9C46A;
-    --branco: #FFFFFF;
-    --cinza-escuro: #264653;
-    --cinza-claro: #F4F4F4;
-}
+  /* Fundo principal continua branco */
+  --cor-fundo-principal: #FFFFFF;
 
+  /* Textos com alto contraste */
+  --cor-texto-principal: #212529; 
+  --cor-texto-secundario: #6c757d; 
+  --cor-fundo-card-cinza: #F4F4F4;
+
+  /* Cores de destaque se mantêm */
+  --cor-primaria-verde: #2A9D8F;
+  --cor-acao-amarelo: #E9C46A;
+
+  /* Fundo para seções secundárias */
+  --cor-fundo-secao: #F4F4F4;
+}
+/* geral */
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: var(--branco);
-    color: var(--cinza-escuro);
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-secundario);
     line-height: 1.6;
 }
 
-/* --- ESTILOS GERAIS --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -32,8 +39,8 @@ body {
 
 /* --- CABEÇALHO E NAVEGAÇÃO --- */
 header {
-    background-color: var(--verde-esperanca);
-    color: var(--branco);
+    background-color: var(--cor-primaria-verde);
+    color: var(--cor-fundo-principal);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -63,7 +70,7 @@ header .div_container_header {
 
 .nav_principal .a_nav {
     text-decoration: none;
-    color: var(--branco);
+    color: var(--cor-fundo-principal);
     font-weight: 700;
     transition: opacity 0.3s;
 }
@@ -72,12 +79,12 @@ header .div_container_header {
     opacity: 0.8;
 }
 
-/* Esconde o botão em telas grandes */
+/* Esconde o botão em telas maiores */
 .buttonToggle {
     display: none;
     background: none;
     border: none;
-    color: var(--branco);
+    color: var(--cor-fundo-principal);
     cursor: pointer;
 }
 .buttonToggle .material-symbols-outlined {
@@ -109,7 +116,7 @@ header .div_container_header {
 
 .hero-texto {
     position: relative;
-    color: var(--branco);
+    color: var(--cor-fundo-principal);
     text-align: center;
     padding: 20px;
     z-index: 1;
@@ -134,12 +141,30 @@ header .div_container_header {
     margin-bottom: 40px;
 }
 
+
 .historia h2 {
-    color: var(--verde-esperanca);
+    color: var(--cor-primaria-verde);
     margin-bottom: 15px;
     font-size: 2rem;
 }
 
+.pagina-titulo-section {
+    background-color: var(--cor-fundo-secao);
+    padding: 40px 0;
+}
+
+.pagina-titulo-texto {
+    color: var(--cor-primaria-verde);
+    text-align: center;
+}
+
+.pagina-titulo-texto h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+
+/* Cards */
 .valores_grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -148,13 +173,13 @@ header .div_container_header {
 }
 
 .valores-card {
-    background-color: var(--cinza-claro);
+    background-color: var(--cor-fundo-card-cinza);
     padding: 30px;
     border-radius: 10px;
 }
 
 .valores-card h3 {
-    color: var(--verde-esperanca);
+    color: var(--cor-primaria-verde);
     text-align: center;
     margin-bottom: 15px;
     font-size: 1.5rem;
@@ -174,24 +199,6 @@ header .div_container_header {
 }
 
 
-
-.pagina-titulo-section {
-    background-color: var(--cinza-claro);
-    padding: 40px 0;
-}
-
-.pagina-titulo-texto {
-    color: var(--verde-esperanca);
-    text-align: center;
-}
-
-.pagina-titulo-texto h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-}
-
-
-
 .projetos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -199,7 +206,7 @@ header .div_container_header {
 }
 
 .card-project {
-    background-color: var(--branco);
+    background-color: var(--cor-fundo-principal);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -231,17 +238,17 @@ header .div_container_header {
 }
 
 .card-text h3 {
-    color: var(--verde-esperanca);
+    color: var(--cor-primaria-verde);
     margin-bottom: 10px;
 }
 
 
-
+/* Formulario */
 .form-cadastro {
     max-width: 600px;
     margin: 0 auto;
     padding: 40px;
-    background-color: var(--cinza-claro);
+    background-color: var(--cor-fundo-card-cinza);
     border-radius: 10px;
 }
 
@@ -271,8 +278,8 @@ header .div_container_header {
 .form-cadastro button {
     width: 100%;
     padding: 15px;
-    background-color: var(--amarelo-vibrante);
-    color: var(--cinza-escuro);
+    background-color: var(--cor-acao-amarelo);
+    color: var(--cor-texto-principal);
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -282,21 +289,19 @@ header .div_container_header {
 }
 
 .form-cadastro button:hover {
-    background-color: #f0c975;
+    background-color: #f1bf54;
 }
 
 
-
+/* footer */
 footer {
-    background-color: var(--verde-esperanca);
-    color: var(--branco);
+    background-color: var(--cor-primaria-verde);
+    color: var(--cor-fundo-principal);
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
 }
-
-
-
+/* mensages  */
 .mensagem-erro {
     color: #c0392b;
     font-size: 0.85rem;
@@ -312,7 +317,7 @@ footer {
 }
 
 
-
+/* resposividade para mobile */
 
 @media (max-width: 768px) {
     
@@ -326,7 +331,7 @@ footer {
         top: 80px; 
         left: 0;
         width: 100%;
-        background-color: var(--verde-esperanca);
+        background-color: var(--cor-primaria-verde);
         
         max-height: 0;
         overflow: hidden;
