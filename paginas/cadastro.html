@@ -54,12 +54,28 @@
                     <p class="mensagem-erro" id="erro-email"></p>
                     
                     <label for="telefone">Telefone (somente números)</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="11999998888" required maxlength="11">
+                    <input type="tel" id="telefone" pattern="\d{10,11}" name="telefone" placeholder="11999998888" required maxlength="11">
                     <p class="mensagem-erro" id="erro-telefone"></p>
 
                     <label for="cpf">CPF (somente números)</label>
-                    <input type="text" id="cpf" name="cpf" placeholder="12345678900" required maxlength="11">
+                    <input type="text" id="cpf" name="cpf" placeholder="12345678900" pattern="[0-9]{11}" required maxlength="11">
                     <p class="mensagem-erro" id="erro-cpf"></p>
+
+                    <label for="dataNacimento">Data de Nacimento</label>
+                    <input type="date" name="dataNacimento" id="dataNacimento" >
+                    <p class="mensagem-erro" id="erro-dataNacimento" ></p>
+
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco">
+
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" pattern="\d{8}">
+
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade">
+
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado">
 
                     <label for="mensagem">Por que você quer ser voluntário?</label>
                     <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
