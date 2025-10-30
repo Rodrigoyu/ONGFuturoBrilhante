@@ -117,3 +117,23 @@ function limparErros() {
     const inputsComErro = document.querySelectorAll('.input-erro');
     inputsComErro.forEach(input => input.classList.remove('input-erro'));
 }
+
+const menuHamburguer = document.getElementById('menu-hamburguer');
+const navPrincipal = document.querySelector('.nav_principal'); 
+    if (menuHamburguer && navPrincipal) {
+        menuHamburguer.addEventListener('click', () => {
+            navPrincipal.classList.toggle('ativo');
+        });
+    }
+
+
+
+/*
+menuHamburguer.addEventListener('click', toke);
+function testeps(){
+function toke(){
+    testeP.textContent = 'fucionou';
+
+}
+}*/
+

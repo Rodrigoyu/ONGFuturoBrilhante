@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 </head>
 <body>
     <header>
@@ -15,11 +17,17 @@
             <div class="nav_titulo">
                 <h1 class="nav_h1">Futuro Brilhante</h1>
             </div>
-            <nav>
-                <ul class="ul_nav">
+
+            <button class="buttonToggle" id="menu-hamburguer">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <nav class="nav_principal">
+                <ul class="ul_nav" id="ul_nav">
                     <li class="li_nav"><a class="a_nav" href="../index.html">Início</a></li>
                     <li class="li_nav"><a class="a_nav" href="projetos.html">Projetos</a></li>
                     <li class="li_nav"><a class="a_nav" href="cadastro.html">Cadastro</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -40,7 +48,7 @@
                             <img src="../assets/imgs/pexels-rdne-6936400.jpg" alt="Crianças estudando">
                         </div>
                         <div class="card-text">
-                            <h3>Mentes Brilhantes</h3>
+                            <h3 tabindex="0">Mentes Brilhantes</h3>
                             <p>Nosso pilar educacional, onde oferecemos reforço escolar e reacendemos o prazer em aprender.</p>
                         </div>
                     </div>
@@ -49,7 +57,7 @@
                             <img src="../assets/imgs/pexels-anastasia-shuraeva-6966341.jpg" alt="Criança pintando">
                         </div>
                         <div class="card-text">
-                            <h3>Fábrica de Sonhos</h3>
+                            <h3 tabindex="0">Fábrica de Sonhos</h3>
                             <p>Acreditamos na arte como ferramenta de autoexpressão. Este projeto abre as portas para oficinas de teatro, música e pintura.</p>
                         </div>
                     </div>
@@ -58,7 +66,7 @@
                             <img src="../assets/imgs/pexels-vanessa-loring-7869230.jpg" alt="Criança usando notebook">
                         </div>
                         <div class="card-text">
-                            <h3>Conectando o Futuro</h3>
+                            <h3 tabindex="0">Conectando o Futuro</h3>
                             <p>Para incluir nossas crianças na era digital, ensinamos desde a informática básica até os primeiros passos em programação.</p>
                         </div>
                     </div>
@@ -67,7 +75,7 @@
                             <img src="../assets/imgs/pexels-kampus-8941579.jpg" alt="Crianças jogando futebol">
                         </div>
                         <div class="card-text">
-                            <h3>Crescer em Movimento</h3>
+                            <h3 tabindex="0">Crescer em Movimento</h3>
                             <p>Utilizamos o esporte para ensinar sobre disciplina, trabalho em equipe e a importância de uma vida saudável.</p>
                         </div>
                     </div>
@@ -79,5 +87,6 @@
     <footer>
         <p>&copy; <span>2025</span> Futuro Brilhante. Todos os direitos reservados.</p>
     </footer>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

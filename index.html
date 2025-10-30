@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 </head>
 
 <body>
@@ -17,11 +19,17 @@
             <div class="nav_titulo">
                 <h1 class="nav_h1">Futuro Brilhante</h1>
             </div>
-            <nav>
-                <ul class="ul_nav">
+
+            <button class="buttonToggle" id="menu-hamburguer">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <nav class="nav_principal">
+                <ul class="ul_nav" id="ul_nav">
                     <li class="li_nav"><a class="a_nav" href="index.html">Início</a></li>
                     <li class="li_nav"><a class="a_nav" href="paginas/projetos.html">Projetos</a></li>
                     <li class="li_nav"><a class="a_nav" href="paginas/cadastro.html">Cadastro</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -38,35 +46,42 @@
         <section class="conteudo-principal">
             <div class="container">
                 <div class="historia">
-                    <h2>Quem Somos Nós?</h2>
+
+                    <h2 tabindex="0">Quem Somos Nós?</h2>
                     <p>
                         Somos um grupo movido pela convicção de que <strong>as crianças são o nosso futuro</strong>.
                         Por isso, criamos a Futuro Brilhante com uma missão clara: oferecer as ferramentas,
-                        a educação e o acolhimento necessários para que elas possam <strong>construir um futuro incrível para si mesmas.</strong>
+                        a educação e o acolhimento necessários para que elas possam <strong>construir um futuro incrível
+                            para si mesmas.</strong>
                     </p>
                 </div>
-                
+
                 <div class="valores_grid">
                     <div class="valores-card">
-                        <h3>Missão</h3>
+                        <h3 tabindex="0">Missão</h3>
                         <p>
-                            Promover o desenvolvimento integral de crianças em situação de vulnerabilidade, oferecendo educação de qualidade, acolhimento e oportunidades.
+                            Promover o desenvolvimento integral de crianças em situação de vulnerabilidade, oferecendo
+                            educação de qualidade, acolhimento e oportunidades.
                         </p>
                     </div>
 
                     <div class="valores-card">
-                        <h3>Visão</h3>
+                        <h3 tabindex="0">Visão</h3>
                         <p>
-                            Um mundo onde cada criança, independentemente de sua origem, tenha o poder e as ferramentas para sonhar e alcançar seu pleno potencial.
+                            Um mundo onde cada criança, independentemente de sua origem, tenha o poder e as ferramentas
+                            para sonhar e alcançar seu pleno potencial.
                         </p>
                     </div>
 
                     <div class="valores-card">
-                        <h3>Nossos Valores</h3>
+                        <h3 tabindex="0">Nossos Valores</h3>
                         <ul class="lista-valores">
-                            <li><strong>Empatia e Acolhimento:</strong> Um ambiente seguro onde cada criança se sente valorizada.</li>
-                            <li><strong>Educação Transformadora:</strong> Aprendizado que vai além da sala de aula e prepara para a vida.</li>
-                            <li><strong>Respeito à Individualidade:</strong> Incentivamos os talentos e sonhos únicos de cada um.</li>
+                            <li><strong>Empatia e Acolhimento:</strong> Um ambiente seguro onde cada criança se sente
+                                valorizada.</li>
+                            <li><strong>Educação Transformadora:</strong> Aprendizado que vai além da sala de aula e
+                                prepara para a vida.</li>
+                            <li><strong>Respeito à Individualidade:</strong> Incentivamos os talentos e sonhos únicos de
+                                cada um.</li>
                         </ul>
                     </div>
                 </div>
@@ -77,5 +92,8 @@
     <footer>
         <p>&copy; <span>2025</span> Futuro Brilhante. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>

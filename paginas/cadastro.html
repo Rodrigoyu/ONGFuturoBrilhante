@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 </head>
 <body>
     <header>
@@ -15,11 +17,17 @@
             <div class="nav_titulo">
                 <h1 class="nav_h1">Futuro Brilhante</h1>
             </div>
-            <nav>
-                <ul class="ul_nav">
+
+            <button class="buttonToggle" id="menu-hamburguer">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <nav class="nav_principal">
+                <ul class="ul_nav" id="ul_nav">
                     <li class="li_nav"><a class="a_nav" href="../index.html">Início</a></li>
                     <li class="li_nav"><a class="a_nav" href="projetos.html">Projetos</a></li>
                     <li class="li_nav"><a class="a_nav" href="cadastro.html">Cadastro</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -46,12 +54,28 @@
                     <p class="mensagem-erro" id="erro-email"></p>
                     
                     <label for="telefone">Telefone (somente números)</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="11999998888" required maxlength="11">
+                    <input type="tel" id="telefone" pattern="\d{10,11}" name="telefone" placeholder="11999998888" required maxlength="11">
                     <p class="mensagem-erro" id="erro-telefone"></p>
 
                     <label for="cpf">CPF (somente números)</label>
-                    <input type="text" id="cpf" name="cpf" placeholder="12345678900" required maxlength="11">
+                    <input type="text" id="cpf" name="cpf" placeholder="12345678900" pattern="[0-9]{11}" required maxlength="11">
                     <p class="mensagem-erro" id="erro-cpf"></p>
+
+                    <label for="dataNacimento">Data de Nacimento</label>
+                    <input type="date" name="dataNacimento" id="dataNacimento" >
+                    <p class="mensagem-erro" id="erro-dataNacimento" ></p>
+
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco">
+
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" pattern="\d{8}">
+
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade">
+
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado">
 
                     <label for="mensagem">Por que você quer ser voluntário?</label>
                     <textarea id="mensagem" name="mensagem" rows="5" required></textarea>

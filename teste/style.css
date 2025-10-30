@@ -1,0 +1,109 @@
+/* Reset básico e estilos do corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo da Barra de Navegação */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Alinha o logo à esquerda e o menu à direita */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex; /* Coloca os links lado a lado */
+    gap: 25px; /* Espaçamento entre os links */
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #00bcd4; /* Cor ao passar o mouse */
+}
+
+/* Botão "Hamburger" - escondido por padrão em telas grandes */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Conteúdo principal para não ficar atrás da navbar fixa */
+main {
+    padding-top: 80px;
+    padding: 80px 30px 30px;
+}
+
+
+/* --- Media Query para Responsividade --- */
+/* Estilos para telas com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão "hamburger" */
+    }
+
+    .nav-menu {
+        display: none; /* Esconde o menu de links por padrão */
+        flex-direction: column; /* Organiza os links verticalmente */
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Posição abaixo da navbar */
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+    
+    /* Classe que será adicionada/removida via JavaScript */
+    .nav-menu.active {
+        display: flex; /* Mostra o menu quando a classe 'active' está presente */
+    }
+
+    .nav-menu li {
+        padding: 15px 0;
+        width: 100%;
+        border-top: 1px solid #444;
+    }
+
+    .nav-menu a:hover {
+        background-color: #444;
+        width: 100%;
+        display: block;
+    }
+}
